@@ -1,0 +1,87 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #000;
+  }
+  
+  .bg-gradient-primary {
+    background: linear-gradient(45deg, #1c1c1e, #343a40);
+  }
+  
+  .text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  
+  .btn-hover:hover {
+    background-color: #4a4a4f;
+    color: #fff;
+  }
+  
+  .input-styled {
+    background-color: #2b2b30;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  
+  .input-styled::placeholder {
+    color: #aaa;
+  }
+  
+  .product-card {
+    background-color: #2b2b30;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  
+  .table {
+    border-color: #444;
+  }
+  
+  .sentiment-card {
+    background-color: #2b2b30;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+  
+  .bg-dark-gradient {
+    background: linear-gradient(45deg, #2b2b30, #18181a);
+  }
+  
+  .progress-bar {
+    transition: width 0.5s ease-in-out;
+  }
+  .btn-yellow {
+    background-color: #ffc107; /* Yellow color */
+    color: #000; /* Black text for contrast */
+    border: none; /* Remove borders */
+  }
+  
+  .btn-yellow:hover {
+    background-color: #ffca2c; /* Slightly darker yellow for hover effect */
+    color: #000; /* Keep text black */
+  }
+
+  .comparison-header {
+    background: transparent !important; /* Makes the background transparent */
+    border: none; /* Removes any border */
+    color: #ffc107;
+  }
+  .comparison-header {
+    background: transparent !important;
+    border: none;
+    color: #ffc107;
+  }
+  
+  .bold-text {
+    font-weight: bold; /* Makes text bold */
+    color:#ffc107; /* Changes the text color to yellow */
+    font-size: 2.5rem; /* Increases the font size */
+  }
+  .no-border {
+    border: none !important; /* Removes the border */
+    box-shadow: none !important; /* Removes any shadow if it's being treated as a border */
+  }
+  

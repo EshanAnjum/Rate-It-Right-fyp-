@@ -1,0 +1,476 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #121212);
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: transparent;
+  
+  text-align: center;
+  padding: 20px 0;
+  
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Filters Section */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.filter-card {
+  flex: 1 1 calc(20% - 15px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filter-card label {
+  font-weight: 500;
+  color: #ffc107;
+}
+
+.custom-select {
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+/* Buttons */
+.search-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7f00, #ffb700);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/* Product List */
+.list-group-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.list-group-item img {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Pagination */
+.pagination {
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    justify-content: center; /* Center on smaller screens */
+  }
+}
+
+
+.page-item .page-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 5px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.page-item .page-link:hover {
+  background: #ffc107;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Dropdown (Custom Select) */
+.custom-select {
+  margin-top: 10px;
+  padding: 12px 16px; /* Proper padding for text and space for the dropdown icon */
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem; /* Ensure text size is consistent */
+  font-weight: 500;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Align dropdown icon properly */
+  background-size: 16px; /* Adjust icon size for visibility */
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+.custom-select option {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+/* Button Styling */
+.search-btn {
+  display: block;
+  width: 100%; /* Full-width button for consistency */
+  padding: 12px 20px; /* Proper padding for text */
+  font-size: 1rem; /* Text size for readability */
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7f00, #ffb700);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.search-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+}
+
+/* Fix Alignment for Dropdown Icon (Fallback for Safari/Edge) */
+select::-ms-expand {
+  display: none; /* Hide default dropdown icon */
+}
+
+/* Button and Dropdown Alignment Fix */
+button::after,
+.custom-select::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Debugging Box Model */
+button,
+.custom-select {
+  box-sizing: border-box; /* Ensure padding and width align properly */
+}
+
+/* Filters Section Styling */
+.filters-section {
+  background: linear-gradient(135deg, #222, #333);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+.filters-section h3 {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Individual Filters Styling */
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.filter-group .filter-item {
+  flex: 1 1 calc(25% - 15px); /* Adjust based on desired width */
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-bottom: 8px;
+}
+
+.filter-group .custom-select {
+  padding: 12px 16px;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-group .custom-select:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
+}
+
+.filter-group .custom-select option {
+  background: #2e2e2e;
+  color: white;
+}
+
+/* Search Button Styling */
+.search-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7f00, #ffb700);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  align-self: center; /* Center the button */
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.6);
+  cursor: pointer;
+}
+
+.search-btn:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-group .filter-item {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+
+  .search-btn {
+    max-width: 100%;
+  }
+}
+
+/* Filters Section */
+.filters-container {
+  background: linear-gradient(135deg, #444, #555);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-card {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+}
+.filter-card label {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+
+.custom-select {
+  padding: 16px 16px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 0.7rem;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
+}
+
+/* Filters Section */
+.filters-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap between the filter cards */
+  justify-content: space-between; /* Ensure equal space between cards */
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Filter Cards */
+.filter-card {
+  flex: 1; /* Allow the filter cards to take equal space */
+  min-width: 180px; /* Set a minimum width for each card */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filter-card label {
+  font-weight: 500;
+  color: #ffc107;
+}
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #1e1e2f; /* dark, modern background */
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-height: 270px; /* fit 6 items */
+  overflow-y: auto;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+.suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #ddd;
+  transition: background-color 0.25s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space for icon or image if needed */
+}
+
+
+/* Hover effect: glow and scale up */
+.suggestion-item:hover {
+  background-color: #3a3a6e; /* highlight color */
+  color: #fff;
+  transform: scale(1.10);
+  box-shadow: 0 0 8px 3px rgba(90, 90, 180, 0.7);
+  z-index: 10; /* bring hovered item above others */
+}
+
+/* Optional: Add a subtle separator between items */
+.suggestion-item + .suggestion-item {
+  border-top: 1px solid #444;
+}
+
+/* Scrollbar style for better UX */
+.suggestions-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-list::-webkit-scrollbar-track {
+  background: #1e1e2f;
+  border-radius: 8px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 8px;
+}

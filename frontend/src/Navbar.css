@@ -1,0 +1,146 @@
+/* Color Scheme */
+:root {
+  --bg: #17170F;
+  --text: #ffffff;
+  --hover: #FFD661;
+  --btn-hover: #BDB299;
+}
+
+/* Base navbar */
+.custom-navbar {
+  background-color: var(--bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;      /* Remove underline */
+  outline: none;              /* Remove blue outline on click */
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 2rem;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+  color: var(--hover);
+  transform: scale(1.05);
+  text-decoration: none;      /* Ensure underline doesn't return on hover */
+  outline: none;              /* Prevent focus outline */
+}
+
+
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--hover);
+}
+
+.login-btn {
+  background-color: #FFD661;
+  color: #17170F;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+/* ✅ This is the key! */
+.login-btn:hover,
+.login-btn:focus,
+.login-btn:active {
+  background-color: #BDB299;
+  color: black !important;  /* Force text to white */
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger open state */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .login-btn {
+    width: 80%;
+    text-align: center;
+  }
+}
