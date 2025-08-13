@@ -54,7 +54,7 @@ def fetch_data(request):
     search_url = f"https://www.walmart.com/search?q={query}"
     print("Url : ", search_url)
 
-    client = ApifyClient("apify_api_yYcwSjjyeFrcTX614gxdxDlPLeRGie4dkiNU")
+    client = ApifyClient("")
 
     run_input = {
         "startUrls": [{"url": search_url}],
@@ -128,8 +128,8 @@ import csv
 import datetime
 import re
 
-API_USERNAME = "amazon_l6lfY"
-API_PASSWORD = "Amazon112233+"
+API_USERNAME = ""
+API_PASSWORD = ""
 
 def get_product_asins(product_name, max_pages=10, retries=10):
     # List of user agents to rotate
@@ -274,3 +274,4 @@ def main():
             print(f"No reviews found for ASIN: {asin}")
 
     save_reviews_to_csv(all_reviews, product_name)
+
